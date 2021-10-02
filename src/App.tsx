@@ -1,26 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Greeting from "./Greeting";
 
-function App() {
+const App = () => {
+  const [data, setData] = useState<number>(0);
+  const addCount = () => {
+    setData(data + 1);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Greeting name={"bae"} age={17} onClick={addCount} />
+      <button>{data}</button>
     </div>
   );
-}
+};
 
 export default App;
