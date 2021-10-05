@@ -1,14 +1,16 @@
-type PropType = {
-  name: string;
-  age: number;
-  onClick: () => void;
-};
+import { useState } from "react";
 
-const Greeting = ({ name, age, onClick }: PropType) => {
-  const click = () => onClick();
+const Greeting = () => {
+  const [data, setData] = useState<number>(0);
+
+  const onIncrease = () => setData((data) => data + 1);
+  const onDecrease = () => setData((data) => data - 1);
+
   return (
-    <div onClick={click}>
-      Hello! I'm {name}[{age}]
+    <div>
+      <button onClick={onIncrease}> +1 </button>
+      <button onClick={onDecrease}> -1 </button>
+      <div>{data}</div>
     </div>
   );
 };
