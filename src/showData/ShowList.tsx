@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { request } from "./axios/axios";
-import { dataListType } from "./interfaces/showList";
+import { request } from "../axios/axios";
+import { dataListType } from "../interfaces/showList";
 import Word from "./Word";
 
 const ShowList = () => {

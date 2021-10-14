@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { wordProps } from "./interfaces/showList";
+import { wordProps } from "../interfaces/showList";
 
 const Word = ({ data }: wordProps) => {
   const [toDo, setToDo] = useState<boolean>(data.toDo);
