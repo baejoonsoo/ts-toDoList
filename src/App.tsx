@@ -13,7 +13,7 @@ const App = () => {
     {
       id: 1,
       content: "ts study",
-      toDo: false,
+      toDo: true,
     },
   ]);
   return (

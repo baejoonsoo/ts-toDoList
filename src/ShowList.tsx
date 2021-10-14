@@ -1,3 +1,6 @@
+import { useState } from "react";
+import Word from "./Word";
+
 type data = {
   id: number;
   content: string;
@@ -7,11 +10,9 @@ type data = {
 const ShowList = ({ listData }: { listData: data[] }) => {
   return (
     <div>
-      {listData.map((data: data) => (
-        <div>
-          <p>{data.content}</p>
-        </div>
-      ))}
+      {listData.map((data: data) => {
+        return <Word data={data} />;
+      })}
     </div>
   );
 };
