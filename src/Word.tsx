@@ -1,14 +1,7 @@
 import { useState } from "react";
+import { wordProps } from "./interfaces/showList";
 
-type propType = {
-  data: {
-    id: number;
-    content: string;
-    toDo: boolean;
-  };
-};
-
-const Word = ({ data }: propType) => {
+const Word = ({ data }: wordProps) => {
   const [toDo, setToDo] = useState<boolean>(data.toDo);
 
   const changeDoTo = () => {
@@ -18,7 +11,7 @@ const Word = ({ data }: propType) => {
   return (
     <div>
       <span>{data.content}</span>
-      <input type="checkbox" checked={toDo} onClick={changeDoTo} />
+      <input type="checkbox" readOnly checked={toDo} onClick={changeDoTo} />
     </div>
   );
 };

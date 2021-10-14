@@ -1,17 +1,26 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { request } from "./axios/axios";
+import { dataListType } from "./interfaces/showList";
 import Word from "./Word";
 
-type data = {
-  id: number;
-  content: string;
-  toDo: boolean;
-};
+const ShowList = () => {
+  const [dataList, setDataList] = useState<dataListType[]>([]);
 
-const ShowList = ({ listData }: { listData: data[] }) => {
+  useEffect(() => {
+    request("get", {})
+      .then((res: any) => {
+        console.log(res);
+        setDataList(res);
+      })
+      .catch((err) => {
+        alert(`error`);
+      });
+  }, []);
+
   return (
     <div>
-      {listData.map((data: data) => {
-        return <Word data={data} />;
+      {dataList.map((data) => {
+        return <Word data={data} key={data.id} />;
       })}
     </div>
   );
