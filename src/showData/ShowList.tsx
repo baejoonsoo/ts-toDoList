@@ -1,18 +1,18 @@
-import { useEffect, useState } from "react";
-import { request } from "../axios/axios";
-import { dataListType } from "../interfaces/showList";
-import Word from "./Word";
+import { useEffect, useState } from 'react';
+import { request } from '../hook/axios';
+import { dataListType } from '../interfaces/showList';
+import Word from './Word';
 
 const ShowList = () => {
   const [dataList, setDataList] = useState<dataListType[]>([]);
 
   useEffect(() => {
-    request("get", {})
+    request('', 'get', {})
       .then((res: any) => {
-        console.log(res);
         setDataList(res);
       })
       .catch((err) => {
+        console.info(err);
         alert(`error`);
       });
   }, []);

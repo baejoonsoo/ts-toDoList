@@ -1,19 +1,18 @@
-import axios, { Method } from "axios";
+import axios, { Method } from 'axios';
 
-const BASE_URL = "http://localhost:4000/dataList";
+const BASE_URL = 'http://localhost:4000/dataList/';
 
 interface dataType {
   content?: string;
 }
 
-export const request = (method: Method, data: dataType) => {
+export const request = (url: string, method: Method, data: dataType) => {
   return axios({
     method,
-    url: BASE_URL,
+    url: BASE_URL + url,
     data,
   })
     .then((res) => {
-      console.log(res.data);
       return res.data;
     })
     .catch((err) => {

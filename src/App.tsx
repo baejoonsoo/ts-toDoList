@@ -1,5 +1,5 @@
-import AddData from "./AddData";
-import ShowList from "./showData/ShowList";
+import AddData from './AddData/AddData';
+import ShowList from './showData/ShowList';
 
 const App = () => {
   return (
