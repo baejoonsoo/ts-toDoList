@@ -16,6 +16,7 @@ const AddData = () => {
     }
     request('', 'post', {
       content: content,
+      toDo: false,
     })
       .then((res) => {
         alert('목록이 추가되었습니다');

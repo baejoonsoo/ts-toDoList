@@ -1,21 +1,3 @@
 {
-  "dataList": [
-    {
-      "id": 1,
-      "content": "ts",
-      "toDo": true
-    },
-    {
-      "content": "a",
-      "id": 2
-    },
-    {
-      "content": "a",
-      "id": 3
-    },
-    {
-      "content": "a",
-      "id": 4
-    }
-  ]
+  "dataList": []
 }

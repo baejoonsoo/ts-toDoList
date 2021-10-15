@@ -4,6 +4,7 @@ const BASE_URL = 'http://localhost:4000/dataList/';
 
 interface dataType {
   content?: string;
+  toDo?: boolean;
 }
 
 export const request = (url: string, method: Method, data: dataType) => {
