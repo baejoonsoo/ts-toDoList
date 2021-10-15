@@ -20,6 +20,7 @@ export const DelBtn = styled.button`
   border-left: black 1px solid;
   background-color: white;
   outline: 0;
+  color: red;
 `;
 
 export const T = styled.div`
