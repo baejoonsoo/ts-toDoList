@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const WordBox = styled.div`
   border: black 1px solid;
-  width: 40vw;
+  width: 60vw;
   margin: 20px;
   display: flex;
   flex-direction: row;
