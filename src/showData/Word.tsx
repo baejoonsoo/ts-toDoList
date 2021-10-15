@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { request } from '../hook/axios';
 import { wordProps } from '../interfaces/showList';
 import * as S from './style';
@@ -8,14 +8,11 @@ const Word = ({ data }: wordProps) => {
   const [toDo, setToDo] = useState<boolean>(data.toDo);
 
   const changeDoTo = () => {
+    request(`${word}`, 'patch', {
+      toDo: !toDo,
+    });
     setToDo(!toDo);
   };
-
-  useEffect(() => {
-    request(`${word}`, 'patch', {
-      toDo: toDo,
-    });
-  }, [toDo]);
 
   const del = () => {
     if (window.confirm('정말로 삭제하시겠습니다?')) {

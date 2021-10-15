@@ -1,11 +1,11 @@
-import AddData from './AddData/AddData';
 import ShowList from './showData/ShowList';
+import Sidebar from './sidebar/Sidebar';
 
 const App = () => {
   return (
     <div>
       <ShowList />
-      <AddData />
+      <Sidebar />
     </div>
   );
 };

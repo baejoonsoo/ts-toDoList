@@ -29,7 +29,7 @@ const AddData = () => {
   };
 
   return (
-    <S.Fixed>
+    <S.AddScreen>
       <S.ContentInput
         maxLength={50}
         placeholder="최대 50글자"
@@ -37,7 +37,7 @@ const AddData = () => {
         onChange={changeContent}
       />
       <S.SubmitBtn onClick={addContent}>추가하기</S.SubmitBtn>
-    </S.Fixed>
+    </S.AddScreen>
   );
 };
 
