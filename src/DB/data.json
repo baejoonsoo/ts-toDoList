@@ -1,27 +1,27 @@
 {
   "dataList": [
     {
-      "content": "ts study",
+      "content": "숨쉬기",
       "toDo": false,
       "id": 1
     },
     {
-      "content": "react 공부",
+      "content": "뒹굴뒹굴",
       "toDo": false,
       "id": 2
     },
     {
-      "content": "프로젝트 회의하기",
+      "content": "놀기",
       "toDo": false,
       "id": 3
     },
     {
-      "content": "디자인 완성하기",
+      "content": "끝내주게 숨쉬기",
       "toDo": false,
       "id": 4
     },
     {
-      "content": "dfajsdkjsdfajdfldfljkasfjklasjklfkdfkljafkljadfjks",
+      "content": "힘차게 뒹굴뒹굴하기",
       "toDo": false,
       "id": 5
     }
