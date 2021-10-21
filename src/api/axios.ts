@@ -8,12 +8,13 @@ interface dataType {
   toDo?: boolean;
 }
 
-export const request = (url: string, method: Method, data: dataType): any => {
-  return axios({
-    method,
-    url: BASE_URL + url,
-    data,
-  })
+export const request = <T>(url: string, method: Method, data: dataType) => {
+  return axios
+    .request<T>({
+      method,
+      url: BASE_URL + url,
+      data,
+    })
     .then((res) => {
       return res.data;
     })

@@ -16,8 +16,8 @@ const Word = ({ data }: wordProps) => {
 
   const del = () => {
     if (window.confirm('정말로 삭제하시겠습니다?')) {
-      request(`${data.id}`, 'delete', {})
-        .then((res: dataListType[]) => {
+      request<dataListType[]>(`${data.id}`, 'delete', {})
+        .then(() => {
           console.log(`목록이 삭제되었습니다`);
 
           setWord(0);

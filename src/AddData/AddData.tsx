@@ -19,11 +19,11 @@ const AddData = () => {
       content: content,
       toDo: false,
     })
-      .then((res: dataListType[]) => {
+      .then((res) => {
         alert('목록이 추가되었습니다');
         window.location.reload();
       })
-      .catch((err: Error) => {
+      .catch((err) => {
         alert('목록 생성에 실패하였습니다');
         setContent('');
       });

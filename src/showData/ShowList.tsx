@@ -7,8 +7,8 @@ const ShowList = () => {
   const [dataList, setDataList] = useState<dataListType[]>([]);
 
   useEffect(() => {
-    request('', 'get', {})
-      .then((res: dataListType[]) => {
+    request<dataListType[]>('', 'get', {})
+      .then((res) => {
         console.log('res');
         console.log(res);
         setDataList(res);
