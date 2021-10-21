@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { request } from '../hook/axios';
-import { wordProps } from '../interfaces/showList';
+import { request } from '../api/axios';
+import { dataListType, wordProps } from '../interfaces/showList';
 import * as S from './style';
 
 const Word = ({ data }: wordProps) => {
@@ -17,12 +17,12 @@ const Word = ({ data }: wordProps) => {
   const del = () => {
     if (window.confirm('정말로 삭제하시겠습니다?')) {
       request(`${data.id}`, 'delete', {})
-        .then((res) => {
+        .then((res: dataListType[]) => {
           console.log(`목록이 삭제되었습니다`);
 
           setWord(0);
         })
-        .catch((err) => {
+        .catch((err: Error) => {
           alert('실패하였습니다!!!');
         });
     }

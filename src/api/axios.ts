@@ -1,4 +1,5 @@
 import axios, { Method } from 'axios';
+import { dataListType } from '../interfaces/showList';
 
 const BASE_URL = 'http://localhost:4000/dataList/';
 
@@ -7,7 +8,7 @@ interface dataType {
   toDo?: boolean;
 }
 
-export const request = (url: string, method: Method, data: dataType) => {
+export const request = (url: string, method: Method, data: dataType): any => {
   return axios({
     method,
     url: BASE_URL + url,

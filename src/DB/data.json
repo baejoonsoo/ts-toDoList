@@ -2,12 +2,12 @@
   "dataList": [
     {
       "content": "숨쉬기",
-      "toDo": false,
+      "toDo": true,
       "id": 1
     },
     {
       "content": "뒹굴뒹굴",
-      "toDo": false,
+      "toDo": true,
       "id": 2
     },
     {
@@ -24,6 +24,11 @@
       "content": "힘차게 뒹굴뒹굴하기",
       "toDo": false,
       "id": 5
+    },
+    {
+      "content": "asdfghjk",
+      "toDo": true,
+      "id": 6
     }
   ]
 }

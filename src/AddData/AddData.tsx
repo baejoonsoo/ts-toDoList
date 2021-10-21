@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { request } from '../hook/axios';
+import { request } from '../api/axios';
+import { dataListType } from '../interfaces/showList';
 import * as S from './style';
 
 const AddData = () => {
@@ -18,11 +19,11 @@ const AddData = () => {
       content: content,
       toDo: false,
     })
-      .then((res) => {
+      .then((res: dataListType[]) => {
         alert('목록이 추가되었습니다');
         window.location.reload();
       })
-      .catch((err) => {
+      .catch((err: Error) => {
         alert('목록 생성에 실패하였습니다');
         setContent('');
       });
