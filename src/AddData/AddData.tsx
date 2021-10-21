@@ -5,7 +5,7 @@ import * as S from './style';
 const AddData = () => {
   const [content, setContent] = useState<string>('');
 
-  const changeContent = (e: any) => {
+  const changeContent = (e: React.ChangeEvent<HTMLInputElement>) => {
     setContent(e.target.value);
   };
 

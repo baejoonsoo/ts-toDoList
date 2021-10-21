@@ -1,15 +1,22 @@
 import { useEffect, useState } from 'react';
 import { request } from '../hook/axios';
 import { dataListType } from '../interfaces/showList';
-// import ChooseState from './ChooseState';
 import Word from './Word';
+
+interface obj {
+  content: string;
+  toDo: boolean;
+  id: number;
+}
 
 const ShowList = () => {
   const [dataList, setDataList] = useState<dataListType[]>([]);
 
   useEffect(() => {
     request('', 'get', {})
-      .then((res: any) => {
+      .then((res: obj[]) => {
+        console.log('res');
+        console.log(res);
         setDataList(res);
       })
       .catch((err) => {
