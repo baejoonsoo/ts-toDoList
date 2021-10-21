@@ -3,18 +3,18 @@ import { request } from '../hook/axios';
 import { dataListType } from '../interfaces/showList';
 import Word from './Word';
 
-interface obj {
-  content: string;
-  toDo: boolean;
-  id: number;
-}
+// interface obj {
+//   content: string;
+//   toDo: boolean;
+//   id: number;
+// }
 
 const ShowList = () => {
   const [dataList, setDataList] = useState<dataListType[]>([]);
 
   useEffect(() => {
     request('', 'get', {})
-      .then((res: obj[]) => {
+      .then((res: any) => {
         console.log('res');
         console.log(res);
         setDataList(res);
