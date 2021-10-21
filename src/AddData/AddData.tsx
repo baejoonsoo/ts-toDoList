@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { request } from '../api/axios';
-import { dataListType } from '../interfaces/showList';
 import * as S from './style';
 
 const AddData = () => {

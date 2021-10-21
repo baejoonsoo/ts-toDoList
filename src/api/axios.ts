@@ -1,5 +1,4 @@
 import axios, { Method } from 'axios';
-import { dataListType } from '../interfaces/showList';
 
 const BASE_URL = 'http://localhost:4000/dataList/';
 

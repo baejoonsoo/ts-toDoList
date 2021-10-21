@@ -9,12 +9,9 @@ const ShowList = () => {
   useEffect(() => {
     request<dataListType[]>('', 'get', {})
       .then((res) => {
-        console.log('res');
-        console.log(res);
         setDataList(res);
       })
       .catch((err: Error) => {
-        console.info(err);
         alert(`error`);
       });
   }, []);
