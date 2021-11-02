@@ -2,10 +2,8 @@ import styled from 'styled-components';
 
 export const Fixed = styled.aside`
   position: fixed;
-  top: 0;
-  right: 0;
+  bottom: 0;
+  right: 30vw;
 
-  margin: 30px;
-  width: 40vh;
-  height: 100vh;
+  width: 40vw;
 `;

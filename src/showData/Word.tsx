@@ -3,7 +3,7 @@ import { request } from '../api/axios';
 import { dataListType, wordProps } from '../interfaces/showList';
 import * as S from './style';
 
-const Word = ({ data }: wordProps) => {
+const Word = ({ data, changeData }: wordProps) => {
   const [word, setWord] = useState<number>(data.id);
   const [toDo, setToDo] = useState<boolean>(data.toDo);
 
@@ -28,6 +28,8 @@ const Word = ({ data }: wordProps) => {
     }
   };
 
+  const change = () => changeData(data);
+
   if (word === 0) {
     return null;
   }
@@ -40,7 +42,8 @@ const Word = ({ data }: wordProps) => {
         </S.T>
         <span>{data.content}</span>
       </S.ToDocheck>
-      <S.DelBtn onClick={del}>삭제하기</S.DelBtn>
+      <S.EvBtn onClick={change}>수정</S.EvBtn>
+      <S.EvBtn onClick={del}>삭제하기</S.EvBtn>
     </S.WordBox>
   );
 };

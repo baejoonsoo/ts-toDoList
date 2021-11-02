@@ -2,6 +2,9 @@ import { useEffect, useState } from 'react';
 import { request } from '../api/axios';
 import { dataListType } from '../interfaces/showList';
 import Word from './Word';
+import * as S from './style';
+import ChangeModal from './ChangeModal';
+import axios from 'axios';
 
 const ShowList = () => {
   const [dataList, setDataList] = useState<dataListType[]>([]);
@@ -16,18 +19,27 @@ const ShowList = () => {
       });
   }, []);
 
+  const [showModal, setShowModal] = useState<boolean>(false);
+  const [patchData, setPatchData] = useState<dataListType>();
+  const changeData = (data: dataListType) => {
+    console.log(data);
+    setPatchData(data);
+    setShowModal(!showModal);
+  };
+
   return (
-    <main>
-      <div>
+    <div>
+      {showModal && <ChangeModal data={patchData} />}
+      <S.Main>
         {dataList.length !== 0 ? (
           dataList.map((data) => {
-            return <Word data={data} key={data.id} />;
+            return <Word data={data} key={data.id} changeData={changeData} />;
           })
         ) : (
           <h2>목록이 비어있습니다</h2>
         )}
-      </div>
-    </main>
+      </S.Main>
+    </div>
   );
 };
 

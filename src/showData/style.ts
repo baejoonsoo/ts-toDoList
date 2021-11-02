@@ -2,9 +2,8 @@ import styled from 'styled-components';
 
 export const WordBox = styled.div`
   border: black 1px solid;
-  width: 60vw;
-  margin: 20px;
   display: flex;
+  width: 30vw;
   flex-direction: row;
 `;
 
@@ -12,9 +11,11 @@ export const ToDocheck = styled.div`
   flex: auto;
 `;
 
-export const DelBtn = styled.button`
+export const EvBtn = styled.button`
   text-align: center;
-  width: 5rem;
+  width: auto;
+  padding-left: 10px;
+  padding-right: 10px;
   margin-left: 10px;
   border: white 1px solid;
   border-left: black 1px solid;
@@ -29,4 +30,11 @@ export const T = styled.div`
   margin-right: 10px;
   padding-right: 1px;
   border-right: 1px black solid;
+`;
+
+//showList.jsx
+export const Main = styled.main`
+  display: grid;
+  grid-gap: 2vw;
+  grid-template-columns: repeat(3, 1fr);
 `;

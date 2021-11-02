@@ -6,4 +6,5 @@ export interface dataListType {
 
 export interface wordProps {
   data: dataListType;
+  changeData: (data: dataListType) => void;
 }
